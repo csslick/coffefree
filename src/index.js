@@ -2,6 +2,8 @@ const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
 const app = express()
+const PORT = process.env.PORT
+
 // 콘텐츠 데이터
 const my_data = require('../public/js/data')
 console.log('data= ', my_data.product);
@@ -68,6 +70,6 @@ app.get('*', (req, res) => {
   })
 })
 
-app.listen(process.env.PORT || 3000, ()=>{
+app.listen(PORT, ()=>{
   console.log('Server running')
 })
