@@ -1,0 +1,297 @@
+/* style.css */
+/* 
+  배경: #fff
+  포인트 컬러: #ca5c43
+  본문 text: #666
+  제품, 어티클 제목: #333
+*/
+/* 초기화 코드 */
+*{
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+ul{ list-style-type: none;}
+a{ text-decoration: none;}
+body{
+  /* 다국어 */
+  font-family: 'Nanum Gothic', '맑은 고딕', sans-serif;
+  color: #666;
+  overflow-x: hidden;
+}
+h1{
+  font-size: 28px;
+  /* font-family: 'Open Sans', sans-serif; */
+}
+h2{
+  font-family: 'Noto Serif KR', 'Nanum Myeongjo', serif;
+  font-size: 28px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: #ca5c43
+}
+p{
+  font-size: 16px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.8em;
+}
+.container{
+  position: relative;
+  width: 1200px;
+  /* border: 1px solid red; */
+  margin: 0 auto;
+}
+
+/* 헤더 */
+#main-header{
+  background: transparent;
+  color: #fff;
+  height: 60px;
+  position: fixed;
+  left: 0; top: 0;
+  width: 100%;
+  z-index: 99;
+}
+#main-header.bg-b{
+  background: #000;
+  color: #fff;
+}
+
+#main-header h1{
+  position: absolute;
+  left: 0; top: 14px;
+}
+#main-header h1 a{ color: #fff;}
+#main-header nav{
+  position: absolute;
+  right: 0; top: 22px;
+}
+#main-header nav ul { display: inline-block;}
+#main-header nav ul li{
+  display: inline-block;
+  margin-left: 0.8em;
+  margin-right: 0.8em;
+}
+#main-header nav ul.icon-menu li:last-child{
+  margin-right: 0;
+}
+/* https://jsfiddle.net/tailofmoon/b7orLmqv/ */
+#main-header nav ul li a{ color: #fff;}
+#main-header nav ul li a:hover,
+#main-header nav ul li label:hover{ 
+  /* color: #ca5c43; */
+  color: rgba(255,255,255, 0.8);
+}
+
+/* 검색창 액션 - focus시 창이 열림 */
+#s{
+  width: 0;
+  opacity: 0;
+}
+#s:focus{
+  width: 10em;
+  opacity: 1;
+}
+
+/* 메인 비주얼 */
+#main-visual{
+  width: auto;
+  height: 500px;
+  background: #ccc;
+  background-image: url('../img/visual.jpg');
+  background-size: cover;
+  /* 배경고정효과(패럴랙스 배경) */
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+}
+#main-visual h2{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: 'Nanum Gothic', '맑은 고딕', sans-serif;
+  font-size: 60px;
+  color: #fff;
+}
+#main-visual p{
+  margin-bottom: 2em;
+}
+.btn-more{
+  color: #fff;
+  background: #ca5c43;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.btn-more:hover{
+  background: rgba(202,92,67, 0.8);
+}
+#main-visual .container{
+  padding-top: 80px;
+}
+
+/* 스패셜 커피 브랜드 섹션 */
+#brand{
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  overflow: hidden;
+}
+#brand h2, #brand p{
+  padding-left: 295px;
+  padding-right: 295px;
+}
+#brand p{ margin-bottom: 100px;}
+#brand .product{
+
+}
+#brand .product li{
+  /* 그리드 시스템 공식 */
+  /*  1200(폭) - (중간 여백 = 칼럼수-1) / 3(컬럼수) */
+  width: 386px;
+  float: left;
+  margin-right: 20px;
+}
+#brand .product li:nth-child(3n){
+  margin-right: 0;
+}
+#brand .product img{
+  display: block;
+  margin-bottom: 1em;
+}
+#brand .product .name{
+  display: block;
+  font-weight: bold;
+  font-family: 'Noto Serif KR', 'Nanum Myeongjo', serif;
+}
+#brand .product .price{
+  margin-top: 1em;
+  font-size: 13px;
+}
+#brand .product .price strong{
+  color: #ca5c43;
+}
+
+/* 배너 섹션 */
+#banner{
+  text-align: center;
+  padding-bottom: 100px;
+  overflow: hidden;  
+}
+#banner .container{ border: none;}
+#banner .coffe-product{
+  width: 590px; height: 400px;
+  background: #ccc;
+  background-image: url('http://placeimg.com/590/400/tech');
+  float: left;
+  margin-right: 20px;
+}
+#banner .contact-us{
+  width: 590px; height: 400px;
+  background: #ccc;
+  background-image: url('http://placeimg.com/590/400/people');
+  float: left;
+}
+#banner .coffe-product h3,
+#banner .contact-us{
+  font-size: 42px;
+  padding-top: 160px;
+  color: #fff;
+}
+
+/* SNS */
+#sns .container{ 
+  text-align: center;
+  box-sizing: content-box;
+  overflow: hidden;
+  padding-bottom: 100px;
+}
+#sns ul li{
+  width: 240px;
+  float: left;
+}
+
+/* post(글) 섹션 */
+#post .container{ 
+  box-sizing: content-box;
+  overflow: hidden;
+  padding-bottom: 100px;
+}
+#post article:first-child{
+  width: 590px;
+  background: #fff;
+  float: left;
+  margin-right: 20px;  
+}
+#post article:last-child{
+  width: 590px;
+  background: #fff;
+  float: left; 
+}
+#post article h2{
+  /* font-family: 'Nanum Myeongjo', serif; */
+}
+#post .btn-more{ 
+  display: inline-block;
+  margin-top: 1em;
+  color: #ca5c43;
+  background-color: transparent;
+  padding-left: 0;
+  text-decoration: underline;
+}
+#post article h2{
+  font-size: 24px;
+  color: #333;
+}
+
+#main-footer{
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#main-footer .sns-icon{
+  margin-bottom: 1em;
+}
+#main-footer .sns-icon a{
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  font-size: 24px;
+  color: #000;
+}
+#main-footer .footer-menu{
+  margin-bottom: 1em;
+}
+#main-footer .footer-menu a{
+  margin-left: 1em;
+  margin-right: 1em;
+  color: #666;
+}
+#main-footer .address p{
+  margin-bottom: 1em;
+  font-size: 14px;
+}
+#main-footer .copy{
+  font-size: 14px;
+}
+
+
+
+/* sub01 */
+#sub01 #main-header{
+  background: #000;
+  /* position: relative; */
+}
+#main{
+}
+.container{ 
+  /* border: 1px solid red; */
+}
+#brand .product li{
+  margin-bottom: 100px;
+}
+/* 맨 마지막 줄 목록 하단 여백 제거 */
+#brand .product li:nth-last-child(1),
+#brand .product li:nth-last-child(2),
+#brand .product li:nth-last-child(3){
+  margin-bottom: 0;
+}
