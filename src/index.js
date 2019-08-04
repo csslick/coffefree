@@ -68,6 +68,6 @@ app.get('*', (req, res) => {
   })
 })
 
-app.listen(3000, ()=>{
-  console.log('Server running at 3000 port')
+app.listen(process.env.PORT || 3000, ()=>{
+  console.log('Server running')
 })
